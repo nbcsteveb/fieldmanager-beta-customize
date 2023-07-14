@@ -116,15 +116,15 @@ add_filter( 'wp_editor_settings', function ( $settings, $editor_id ) {
 /**
  * Add a field to the Customizer.
  *
- * @param string|array       $args @see Fieldmanager_Beta_Context_Customize.
- *                                 Pass a string to add a Customizer section for
- *                                 this field that uses the string for its title
- *                                 and context defaults for the remaining
- *                                 arguments. Or, pass a full array of arguments
- *                                 for the context.
- * @param Fieldmanager_Field $fm   Field object to add to the Customizer.
+ * @param string|array        $args @see Fieldmanager_Beta_Context_Customize.
+ *                                  Pass a string to add a Customizer section for
+ *                                  this field that uses the string for its title
+ *                                  and context defaults for the remaining
+ *                                  arguments. Or, pass a full array of arguments
+ *                                  for the context.
+ * @param ?Fieldmanager_Field $fm   Field object to add to the Customizer.
  */
-function fm_beta_customize_add_to_customizer( $args = array(), $fm ) {
+function fm_beta_customize_add_to_customizer( $args = array(), $fm = null ) {
 	if ( is_string( $args ) ) {
 		$args = array( 'section_args' => array( 'title' => $args ) );
 	}
